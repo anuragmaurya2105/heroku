@@ -14,9 +14,9 @@ if [ "${LIBDRIVE_VERSION}" != "dev" ]; then
     fi
 
     if [ ! -z "${LIBDRIVE_REPOSITRY}" ]; then
-        REPO="anuragmaurya2105/libDrive"
+        REPO=${LIBDRIVE_REPOSITRY}
     else
-        REPO="anuragmaurya2105/libDrive"
+        REPO="libDrive/libDrive"
     fi
 
     curl -L -s $(curl -s "https://api.github.com/repos/${REPO}/releases/${VER}" | grep -Po '"browser_download_url": "\K.*?(?=")') | tar xf - -C .
