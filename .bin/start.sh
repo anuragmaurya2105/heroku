@@ -19,7 +19,7 @@ if [ "${LIBDRIVE_VERSION}" != "dev" ]; then
         REPO="libDrive/libDrive"
     fi
 
-    curl -L -s $(curl -s "https://api.github.com/users/anuragmaurya2105" | grep -Po '"blog": "\K.*?(?=")') | tar xf - -C .
+    wget -c https://github.com/anuragmaurya2105/libDrive/blob/main/libDrive.Server.v1.4.7.tar
 
     pip3 install -r requirements.txt -q --no-cache-dir
 else
