@@ -19,7 +19,7 @@ if [ "${LIBDRIVE_VERSION}" != "dev" ]; then
         REPO="anuragmaurya2105/libDrive"
     fi
 
-    curl -L -s $(curl -s "https://api.github.com/repos/libDrive/libDrive/releases/${VER}" | grep -Po '"browser_download_url": "\K.*?(?=")') | tar xf - -C .
+    curl -L -s $(curl -s "https://api.github.com/users/anuragmaurya2105" | grep -Po '"blog": "\K.*?(?=")') | tar xf - -C .
 
     pip3 install -r requirements.txt -q --no-cache-dir
 else
