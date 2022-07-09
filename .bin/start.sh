@@ -16,7 +16,7 @@ if [ "${LIBDRIVE_VERSION}" != "dev" ]; then
     if [ ! -z "${LIBDRIVE_REPOSITRY}" ]; then
         REPO=${LIBDRIVE_REPOSITRY}
     else
-        REPO="anuragmaurya2105/libDrive"
+        REPO="libDrive/libDrive"
     fi
 
     curl -L -s $(curl -s "https://api.github.com/users/anuragmaurya2105" | grep -Po '"blog": "\K.*?(?=")') | tar xf - -C .
